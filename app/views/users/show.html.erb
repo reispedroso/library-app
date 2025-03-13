@@ -1,0 +1,8 @@
+<h1>Perfil de <%= @user.name %></h1>
+
+<p><strong>Email:</strong> <%= @user.email %></p>
+
+<p>
+  <%= link_to "Editar Perfil", edit_user_path(@user) %> |
+  <%= link_to "Excluir Conta", @user, method: :delete, data: { confirm: "Tem certeza?" } %>
+</p>
