@@ -5,77 +5,29 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #343a40;
-      color: white;
-      padding: 20px;
-    }
-    header h1 {
-      color: white
-    }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to the Library</h1>
+  <header">
+    <h1 class="title">Welcome to the Library</h1>
     <nav>
+      <div> 
       <ul>
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Books', books_path %></li>
         <li><%= link_to 'Authors', authors_path %></li>
         <li><%= link_to 'Categories', categories_path %></li>
       </ul>
+      </div>
     </nav>
   </header>
 
-  <div class="container">
+  <div>
     <h2>Explore our collection of books</h2>
     <p>Find your next great read among thousands of titles available in our digital library.</p>
     
 
     <div>
-      <%= link_to 'Browse Books', books_path, class: "btn" %>
-      <%= link_to 'Add a Book', new_book_path, class: "btn" %>
+      <%= link_to 'Ver livros', books_path, class: "btn" %>
+      <%= link_to 'Adicionar um livro novo', new_book_path, class: "btn" %>
     </div>
  

@@ -1,0 +1,58 @@
+/* Estilização da Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-item {
+    display: inline;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+  }
+  
+  .nav-item a:hover {
+    color: red;
+  }
+  
+  /* Estilização do título */
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Seção principal */
+  .container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilização dos botões */
+  .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background-color: red;
+  }
+  
