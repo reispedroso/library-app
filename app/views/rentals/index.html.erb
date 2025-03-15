@@ -1,2 +1,9 @@
-<h1>Hello, World!</h1>
-<p>Welcome to the Rentals Index Page</p>
+<h1>Available Books</h1>
+
+<% @books.each do |book| %>
+  <div>
+    <h2><%= book.title %></h2>
+    <p><%= book.description %></p>
+    <%= link_to 'Rent', new_rental_path(book_id: book.id) %>
+  </div>
+<% end %>

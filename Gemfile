@@ -19,6 +19,7 @@ gem "bootsnap", require: false
 
 gem "kamal", require: false
 
+gem "friendly_id", "~> 5.5.0"
 
 gem "thruster", require: false
 

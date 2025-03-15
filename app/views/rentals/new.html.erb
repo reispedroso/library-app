@@ -1,2 +1,6 @@
-<h1>Hello, World!</h1>
-<p>Welcome to the Rentals New Page</p>
+<h1>Rent <%= @book.title %></h1>
+
+<%= form_with model: @rental, url: rentals_path do |form| %>
+  <%= form.hidden_field :book_id, value: @book.id %>
+  <%= form.submit 'Confirm Rental' %>
+<% end %>
