@@ -8,7 +8,7 @@ class BooksController < ApplicationController
   end
 
   def show
-  @books = Book.where(id: params[:id])
+  @book = Book.friendly.find(params[:id])
   end
 
   def new
@@ -27,7 +27,7 @@ class BooksController < ApplicationController
 
 
   def edit
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
   end
 
   def update
@@ -46,7 +46,7 @@ class BooksController < ApplicationController
   private
 
   def set_book
-    @book = Book.find(params[:id])
+    @book = Book.friendly.find(params[:id])
   end
 
   def set_authors

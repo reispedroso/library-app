@@ -1,23 +1,10 @@
-<h1>Books</h1>
+<div>
+  <h1><%= @book.title %></h1>
+<p><strong>Author:</strong> <%= @book.author.name %></p>
+<p><strong>Description:</strong> <%= @book.description %></p>
+<p><strong>Release Date:</strong> <%= @book.release_date %></p>
+<p><strong>Category:</strong> <%= @book.category.name %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Published Date</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= book.title %></td>
-        <td><%= book.author %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
+</div>
